@@ -1,7 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Net.Http.Json;
 using TemperatureServer.Models;
-
 class Program
 {
     private static readonly string apiUrl = "https://localhost:7255/api/temperature";
