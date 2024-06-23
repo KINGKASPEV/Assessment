@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApp", "MyWebApp\MyWebA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseApp", "DatabaseApp\DatabaseApp.csproj", "{E9BA2718-C2E3-4C5D-8A57-75CBD193D9D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2PChatApp", "P2PChatApp\P2PChatApp.csproj", "{9EF3180F-5AB0-4981-986F-09A4DB6078D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E9BA2718-C2E3-4C5D-8A57-75CBD193D9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9BA2718-C2E3-4C5D-8A57-75CBD193D9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9BA2718-C2E3-4C5D-8A57-75CBD193D9D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EF3180F-5AB0-4981-986F-09A4DB6078D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF3180F-5AB0-4981-986F-09A4DB6078D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF3180F-5AB0-4981-986F-09A4DB6078D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF3180F-5AB0-4981-986F-09A4DB6078D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
