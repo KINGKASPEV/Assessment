@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2PChatApp", "P2PChatApp\P2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptographyApp", "CryptographyApp\CryptographyApp.csproj", "{0487385C-8D55-425F-9073-38C2F8A210D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureServer", "TemperatureServer\TemperatureServer.csproj", "{14435AAB-5347-4758-BF63-02ABA658EE1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTDeviceApp", "IoTDeviceApp\IoTDeviceApp.csproj", "{4A6B9666-E285-4134-A17D-AAE98F9BD7F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{0487385C-8D55-425F-9073-38C2F8A210D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0487385C-8D55-425F-9073-38C2F8A210D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0487385C-8D55-425F-9073-38C2F8A210D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14435AAB-5347-4758-BF63-02ABA658EE1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14435AAB-5347-4758-BF63-02ABA658EE1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14435AAB-5347-4758-BF63-02ABA658EE1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14435AAB-5347-4758-BF63-02ABA658EE1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A6B9666-E285-4134-A17D-AAE98F9BD7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6B9666-E285-4134-A17D-AAE98F9BD7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6B9666-E285-4134-A17D-AAE98F9BD7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6B9666-E285-4134-A17D-AAE98F9BD7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
