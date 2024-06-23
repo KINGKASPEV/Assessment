@@ -23,7 +23,7 @@ namespace TemperatureServer.Controllers
             }
 
             data.Id = temperatureDataList.Count + 1;
-            data.Timestamp = DateTime.Now;
+            data.Timestamp = DateTime.UtcNow;
             temperatureDataList.Add(data);
             return Ok();
         }

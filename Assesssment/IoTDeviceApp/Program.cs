@@ -30,7 +30,6 @@ class Program
             {
                 try
                 {
-                    // Send temperature data to server
                     response = await httpClient.PostAsJsonAsync(apiUrl, temperatureData);
                     response.EnsureSuccessStatusCode(); 
 
