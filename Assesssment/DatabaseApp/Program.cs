@@ -1,48 +1,28 @@
-﻿using DatabaseApp;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using MongoDB.Bson;
-using MongoDB.Driver;
+﻿using DatabaseApp.Models;
+using DatabaseApp.Services;
 
-var host = CreateHostBuilder(args).Build();
+var productService = new ProductService();
+var customerService = new CustomerService();
 
-using (var scope = host.Services.CreateScope())
+// Insert a new product
+productService.AddProduct(new Product { ProductName = "New Product", Price = 99.99m });
+
+// Retrieve all products
+var allProducts = productService.GetAllProducts();
+Console.WriteLine("Products:");
+foreach (var product in allProducts)
 {
-    var services = scope.ServiceProvider;
-    try
-    {
-        var context = services.GetRequiredService<ProductDbContext>();
-        var mongoService = services.GetRequiredService<MongoService>();
-
-        var newEntity = new Product { Name = "Daniel Okafor" };
-        context.Products.Add(newEntity);
-        context.SaveChanges();
-
-        var newDocument = new BsonDocument { { "name", "Daniel Okafor" } };
-        mongoService.InsertDocumentAsync("DeroyalsCollection", newDocument).Wait();
-
-        Console.WriteLine("Data inserted successfully.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"An error occurred: {ex.Message}");
-    }
+    Console.WriteLine($"ID: {product.ProductID}, Name: {product.ProductName}, Price: {product.Price}");
 }
 
-static IHostBuilder CreateHostBuilder(string[] args) =>
-    Host.CreateDefaultBuilder(args)
-        .ConfigureAppConfiguration((context, config) =>
-        {
-            config.SetBasePath(Directory.GetCurrentDirectory());
-            config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-        })
-        .ConfigureServices((hostContext, services) =>
-        {
-            services.AddDbContext<ProductDbContext>(options =>
-                options.UseSqlServer(hostContext.Configuration.GetConnectionString("DefaultConnection")));
-            services.AddSingleton<IMongoClient, MongoClient>(
-                _ => new MongoClient(hostContext.Configuration.GetConnectionString("MongoDbConnection")));
-            services.AddSingleton<MongoService>();
-        });
+// Insert a new customer
+customerService.AddCustomer(new Customer { Name = "Kingsley Okafor", Email = "kingsleychiboy22@gmail.com" });
+
+// Retrieve all customers
+var allCustomers = customerService.GetAllCustomers();
+Console.WriteLine("\nCustomers:");
+foreach (var customer in allCustomers)
+{
+    Console.WriteLine($"ID: {customer.CustomerId}, Name: {customer.Name}, Email: {customer.Email}");
+}
+
